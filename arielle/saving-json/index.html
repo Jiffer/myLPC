@@ -1,0 +1,41 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- to get rid of favicon request in console -->
+  <link rel="shortcut icon" href="">
+
+  <!-- set viewport - for responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SOCKET STUFF -->
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+  <script type="text/javascript">
+    
+    /// SOCKET STUFF - comment in to use socket
+    var socket = io.connect();
+    
+    socket.on('connect', function() {
+      console.log("Connected");
+
+    });
+
+  </script>
+
+  <style> 
+
+    body{
+    	font-family: monospace;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+</body>
+</html>

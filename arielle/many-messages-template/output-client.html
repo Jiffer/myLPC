@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title> Multiple Messages</title>
+
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+		<script type="text/javascript">
+		
+			/// SOCKET STUFF
+			var socket = io.connect();
+			
+			socket.on('connect', function() {
+				console.log("Connected");
+			});
+
+			socket.on('box1output', function(){
+				console.log("b1 output message");
+
+				if(document.getElementById('box1').style.backgroundColor == 'white'){
+					document.getElementById('box1').style.backgroundColor = '#5c7148';
+				}else
+				{
+					document.getElementById('box1').style.backgroundColor = 'white';
+				}
+				
+			})
+
+			////// DO EVENT LISTENERS AFTER PAGE HAS LOADED
+			function init(){
+
+				document.getElementById('box1').addEventListener('mousedown', box1function);
+
+				function box1function(){
+					console.log('in the output client box1 funk');
+
+					// emit to server
+					socket.emit('box1');
+				}
+
+	
+			}
+
+			window.addEventListener('load', init);
+	
+		</script>
+
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			html, body{
+				margin:0;
+				padding:0;
+				height:100%;
+			}
+			.grid{
+				display:flex;
+				flex-wrap: wrap;
+				height:50%;
+				width:100%;
+			}
+			.box{
+				width:50%;
+				height:100%;
+			}
+			#box1{
+				background-color: #5c7148;
+				border-bottom: 5px solid white;
+			}
+			#box2{
+				background-color: #5587a2;
+				border-bottom: 5px solid white;
+				border-left: 5px solid white;
+			}
+			#box3{
+				background-color: #0c4c8a;
+			}
+			#box4{
+				background-color: #88b14b;
+				border-left: 5px solid white;
+			}
+			@media(max-width: 600px){
+				.grid{
+					height:100%;
+				}
+				.box{
+					width:100%;
+					height:30%;
+				}
+				#box1{
+					border:none;
+				}
+				#box2{
+					border:none;
+					border-top:5px solid white;
+				}
+				#box3{
+					border:none;
+					border-top:5px solid white;
+				}
+				#box4{
+					border:none;
+					border-top:5px solid white;
+				}
+			} /* end media query*/
+		</style>
+
+		<script>
+
+		</script>
+	</head>
+
+	<body>
+
+		<div class="grid">
+			<div class="box" id="box1"></div>
+			<div class="box" id="box2"></div>
+			<div class="box" id="box3"></div>
+			<div class="box" id="box4"></div>
+		</div>
+
+	</body>
+
+</html>
