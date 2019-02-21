@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<link rel="icon" href="data:;base64,=">
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript">
+		
+			var socket = io.connect();
+			
+			socket.on('connect', function() {
+				console.log("Connected");
+			});
+
+			// Receive from any event
+			socket.on('chatmessage', function (data) {
+				console.log(data);
+				// document.getElementById('messages').innerHTML = "" + data + 
+ 				// + "" + document.getElementById('messages').innerHTML;
+ 				var dataString = '<p>' +  data + '</p>';
+
+ 				// write the message to the html div 'message'
+ 				document.getElementById('message').innerHTML += dataString; //just data replaces content
+			});
+			
+			var sendmessage = function(message) {
+				console.log("chatmessage: " + message);
+				socket.emit('chatmessage', message);
+
+				// clear input value after submit (use id message for the text box)
+				document.getElementById('message').value =""; // fill w/ blank
+
+			};
+
+	
+		</script>	
+	</head>
+ <body>
+ <div id="messages">
+ No Messages Yet
+ </div>
+ <input type="text" id="message" name="message" placeholder="send a messy">
+ <input type="submit" value="submit" onclick="sendmessage(document.getElementById('message').value);">
+ </body>
+</html>
