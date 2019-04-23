@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sequencer</title>
+
+    <script src="sequencer_bundle.js" type="text/javascript"></script>
+    
+    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+  </head>
+  <body>
+    <form action="#" id="input-room-form">
+        <label>Input room name</label>
+        <input type="text" name="inputroomname" id="input-room-box" size="40">
+        <input type="submit" value="Input Room" id="input-room-button">
+    </form>
+    <form action="#" id="output-room-form">
+        <label>Output room name</label>
+        <input type="text" name="outputroomname" id="output-room-box" size="40">
+        <input type="submit" value="Output Room" id="output-room-button">
+    </form>
+    <form action="#" id="slider-form">
+    Tempo <input id="tempoSlider" type="range" max="500" min="50"/> <br/>
+    run <input id="runBox" type="checkbox"/>
+  </form>
+  </body>
+</html>

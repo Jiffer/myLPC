@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Unit Generator</title>
+
+    <script src="polysynth_bundle.js" type="text/javascript"></script>
+    
+    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+  </head>
+  <body>
+    <form action="#" id="input-room-form">
+        <label>Input room name</label>
+        <input type="text" name="inputroomname" id="input-room-box" size="40">
+        <input type="submit" value="Input Room" id="input-room-button">
+    </form>
+    
+    <form action="#" id="slider-form">
+    Volume <input id="volume" type="range" min="0" max="100"/> <br/>
+    Filter <input id="frequency" type="range" min="100" max="3000"/>
+    Q <input id="q" type="range" min="0" max="50"/>
+  </form>
+  </body>
+</html>

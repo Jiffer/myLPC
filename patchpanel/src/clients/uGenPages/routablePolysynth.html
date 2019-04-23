@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Unit Generator</title>
+
+    
+    
+    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+  </head>
+  <body>
+    <form action="#" id="input-room-form">
+        <label>Input room name</label>
+        <input type="text" name="inputroomname" id="input-room-box" size="40">
+        <input type="submit" value="Input Room" id="input-room-button">
+    </form>
+    <h2> Inputs: </h2>
+    "midi" - from Sequencer<br> 
+    "filterCutOff" - float 0:1<br>
+    "filterQ" - float 0:1<br>
+    
+    <form action="#" id="slider-form">
+    Volume <input id="volume" type="range" min="0" max="1" step = "0.01"/> <br/>
+    Filter <input id="frequency" type="range" min="0" max="1" step = "0.01"/>
+    Q <input id="q" type="range"min="0" max="1" step = "0.01"/>
+  </form>
+  </body>
+  <script src="routablepolysynth_bundle.js" type="text/javascript"></script>
+</html>

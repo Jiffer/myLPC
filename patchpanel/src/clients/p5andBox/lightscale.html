@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> LightScale </title>
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        <script src="https://www.doc.gold.ac.uk/eavi/rapidmix/RapidLib.js"></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        
+        <style> 
+            body {
+                padding: 0;
+                margin: 0;
+                margin-top: 20px;
+            }
+            canvas {
+                background: rgb(54, 75, 85);
+                border: 1px;
+                position: absolute;
+                right: 0;
+                z-index:1;
+                margin-bottom: 1em;
+            }
+            #defaultCanvas0 {
+                z-index: -1;
+            }
+            #mlbox {
+            }
+            #room-form {
+                margin: 5px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form action="#" id="input-room-form">
+        ¦   <label>Input room name</label>
+        ¦   <input type="text" name="inputroomname" id="input-room-box" size="40">
+        ¦   <input type="submit" value="Input Room" id="input-room-button">
+        </form>
+        <form action="#" id="output-room-form">
+          <label>Output room name</label>
+          <input type="text" name="outputroomname" id="output-room-box" size="40">
+          <input type="submit" value="Output Room" id="output-room-button">
+        </form>
+        <!--
+        <form action="#" id="room-form">
+            <label>Enter (output) room name : </label>
+    ¦       <input type="text" name="roomname" id="room-name" size="40">
+        ¦   <input type="submit" value="Enter Room" id="room-button">
+        </form>
+        -->
+        <canvas id="mlbox"></canvas> 
+
+     <script type="text/javascript" src="lightscale_bundle.js"> </script>
+    </body>
+</html>

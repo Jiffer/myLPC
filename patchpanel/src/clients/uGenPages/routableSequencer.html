@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sequencer</title>
+
+    
+    
+    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+  </head>
+  <body>
+    <form action="#" id="input-room-form">
+        <label>Input room name</label>
+        <input type="text" name="inputroomname" id="input-room-box" size="40">
+        <input type="submit" value="Input Room" id="input-room-button">
+    </form>
+    <form action="#" id="output-room-form">
+        <label>Output room name</label>
+        <input type="text" name="outputroomname" id="output-room-box" size="40">
+        <input type="submit" value="Output Room" id="output-room-button">
+    </form>
+    <h2> Inputs: </h2> 
+    "play" - (int) [0 = stop; 1 = play] <br>
+    "tempo" - (float) [0:1] <br>
+    <hr>
+    
+    <form action="#" id="slider-form">
+    play <input id="runBox" type="checkbox"/>
+    tempo <input id="tempoSlider" type="range" max="1" min="0" step=0.01 /> <br/>
+    </form>
+
+  <h2> Output: </h2><br>
+  notes data [] 
+  
+    <hr>
+
+    
+  </body>
+  <script src="routablesequencer_bundle.js" type="text/javascript"></script>
+</html>

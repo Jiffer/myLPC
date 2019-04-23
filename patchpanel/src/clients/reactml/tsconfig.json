@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "lib": ["es7","dom"],
+        "module": "commonjs",
+        "target": "esnext",
+        "allowSyntheticDefaultImports": true,
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "jsx": "react",
+        "allowJs": true,
+        "typeRoots": ["node_modules/@types"],
+        "experimentalDecorators": true
+    },
+    "include": [
+        "lib/**/*",
+        "src/**/*",
+        "local_typings/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

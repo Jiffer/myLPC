@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Unit Generator</title>
+
+    
+    
+    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+  </head>
+  <body>
+    <form action="#" id="input-room-form">
+        <label>Input room name</label>
+        <input type="text" name="inputroomname" id="input-room-box" size="40">
+        <input type="submit" value="Input Room" id="input-room-button">
+    </form>
+    <form action="#" id="output-room-form">
+        <label>Output room name</label>
+        <input type="text" name="outputroomname" id="output-room-box" size="40">
+        <input type="submit" value="Output Room" id="output-room-button">
+    </form>
+    <h2> Inputs: </h2> 
+    "mode" - integer 0:3<br>
+    "rate1" - float 0:1<br>
+    "rate2" - float 0:1<br>
+    
+    <form action="#" id="slider-form">
+    rate 1 <input id="slider-1" type="range" min="0" max="1" step="0.01"/> <br/>
+    rate 2 <input id="slider-2" type="range" min="0" max="1" step="0.01"/>
+  </form>
+
+  <h2> Output: audio </h2>
+
+  </body>
+  <script src="routableloop_bundle.js" type="text/javascript"></script>
+</html>
